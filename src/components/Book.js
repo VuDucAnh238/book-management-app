@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 const Book = ({
   id,
@@ -10,19 +11,22 @@ const Book = ({
   date,
   handleRemoveBook
 }) => {
+  const history = useHistory();
   return (
     <Card style={{ width: '18rem' }} className="book">
       <Card.Body>
         <Card.Title className="book-title">{bookname}</Card.Title>
         <div className="book-details">
-          <div>Author: {author}</div>
-          <div>Quantity: {quantity} </div>
-          <div>Price: {price} </div>
-          <div>Date: {new Date(date).toDateString()}</div>
+          <div>Tác giả: {author}</div>
+          <div>Số lượng: {quantity} </div>
+          <div>Giá: {price} </div>
+          <div>Ngày thêm: {new Date(date).toDateString()}</div>
         </div>
-        <Button variant="primary">Edit</Button>{' '}
+        <Button variant="primary" onClick={() => history.push(`/edit/${id}`)}>
+          Sửa
+        </Button>{' '}
         <Button variant="danger" onClick={() => handleRemoveBook(id)}>
-          Delete
+          Xóa
         </Button>
       </Card.Body>
     </Card>

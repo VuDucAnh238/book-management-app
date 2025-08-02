@@ -72,7 +72,7 @@ const BookForm = (props) => {
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
       <Form onSubmit={handleOnSubmit}>
         <Form.Group controlId="name">
-          <Form.Label>Book Name</Form.Label>
+          <Form.Label>Tên sách</Form.Label>
           <Form.Control
             className="input-control"
             type="text"
@@ -83,7 +83,7 @@ const BookForm = (props) => {
           />
         </Form.Group>
         <Form.Group controlId="author">
-          <Form.Label>Book Author</Form.Label>
+          <Form.Label>Tác giả</Form.Label>
           <Form.Control
             className="input-control"
             type="text"
@@ -94,7 +94,7 @@ const BookForm = (props) => {
           />
         </Form.Group>
         <Form.Group controlId="quantity">
-          <Form.Label>Quantity</Form.Label>
+          <Form.Label>Số lượng</Form.Label>
           <Form.Control
             className="input-control"
             type="number"
@@ -105,7 +105,7 @@ const BookForm = (props) => {
           />
         </Form.Group>
         <Form.Group controlId="price">
-          <Form.Label>Book Price</Form.Label>
+          <Form.Label>Giá sách</Form.Label>
           <Form.Control
             className="input-control"
             type="text"
@@ -116,7 +116,7 @@ const BookForm = (props) => {
           />
         </Form.Group>
         <Button variant="primary" type="submit" className="submit-btn">
-          Submit
+          Nhập
         </Button>
       </Form>
     </div>

@@ -8,10 +8,10 @@ const Header = () => {
       <hr />
       <div className="links">
         <NavLink to="/" className="link" activeClassName="active" exact>
-          Books List
+          Danh sách sách
         </NavLink>
         <NavLink to="/add" className="link" activeClassName="active">
-          Add Book
+          Thêm sách
         </NavLink>
       </div>
     </header>
